@@ -1,3 +1,10 @@
+/*
+ * @Author: MrAlenZhong
+ * @Date: 2020-10-14 10:14:48
+ * @LastEditors: MrAlenZhong
+ * @LastEditTime: 2021-10-17 21:02:06
+ * @Description: 
+ */
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin');
@@ -34,8 +41,8 @@ module.exports = {
             // 提供给其他服务加载的文件
             filename: "remoteEntry.js",
             // 唯一ID，用于标记当前服务
-            name: "app1",
-            library: { type: "var", name: "app1" },
+            name: "portalApp",
+            library: { type: "var", name: "portalApp" },
             // 需要暴露的模块，使用时通过 `${name}/${expose}` 引入
             exposes: {
                 './Header': "./src/components/Header.vue",

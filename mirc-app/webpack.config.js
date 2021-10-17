@@ -2,7 +2,7 @@
  * @Author: MrAlenZhong
  * @Date: 2020-10-14 10:14:48
  * @LastEditors: MrAlenZhong
- * @LastEditTime: 2021-10-17 20:00:37
+ * @LastEditTime: 2021-10-17 21:04:47
  * @Description: 
  */
 const path = require('path');
@@ -38,9 +38,9 @@ module.exports = {
             template: path.resolve(__dirname, './public/index.html')
         }),
         new ModuleFederationPlugin({
-          name: "app2",
+          name: "mirc-app",
           remotes: {
-            app1: "app1@http://localhost:3000/remoteEntry.js",
+            portalApp: "portalApp@http://localhost:3000/remoteEntry.js",
           }
         })
       ]
